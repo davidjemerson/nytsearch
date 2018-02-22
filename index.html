@@ -76,37 +76,7 @@
             </div>
         </div>
     </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript">
-    $("button").on("click", function () {
-        var article = $(this).attr("data-animal");
-        var queryURL = "&9f0df6da40674fc89287d5120811f46a";
-    });
-
-    var searchTerm = ""
-    var numRecords = $("#number").value();
-    var startYear = "0000";
-    var endYear = "0000";
-    var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
-    url += '?' + $.param({
-        'api-key': "e232cd1775c44efaa39c1d9d6fbda862",
-        "q": searchTerm,
-        "begin_date": startYear + "0101",
-        "end_date": endYear + "1231"
-    });
-    $.ajax({
-        url: url,
-        method: 'GET',
-    }).then(function (result) {
-        console.log(result);
-        // for (var i = 0; i < numRecords; i++){
-        // }
-    }).fail(function (err) {
-        throw err;
-    });
-</script>
 
 </html>
